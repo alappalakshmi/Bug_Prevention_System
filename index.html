@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bug Prevention System</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background-shapes">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+                <h2>Bug<span>Guard</span></h2>
+                <small>Prevention System</small>
+            </div>
+        </div>
+
+        <nav class="navigation">
+
+            <button class="nav-item active" data-page="home">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </button>
+
+            <button class="nav-item" data-page="dashboard">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </button>
+
+            <button class="nav-item" data-page="report">
+                <i class="fa-solid fa-bug"></i>
+                <span>Bug Report</span>
+            </button>
+
+            <button class="nav-item" data-page="checklist">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Prevention Checklist</span>
+            </button>
+
+            <button class="nav-item" data-page="history">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Bug History</span>
+            </button>
+
+            <button class="nav-item" data-page="analytics">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Analytics</span>
+            </button>
+
+            <button class="nav-item" data-page="settings">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="system-status">
+                <span class="status-dot"></span>
+                System Operational
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Topbar -->
+        <header class="topbar">
+
+            <button class="mobile-menu" id="mobileMenu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div>
+                <p class="topbar-label">Software Quality Platform</p>
+                <h3 id="pageTitle">Bug Prevention System</h3>
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="icon-btn" id="notificationBtn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-mini">
+                    <div class="avatar">JD</div>
+                    <div class="profile-info">
+                        <strong>John Doe</strong>
+                        <small>Developer</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HOME ================= -->
+        <section class="page active-page" id="home">
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <div class="badge">
+                        <i class="fa-solid fa-shield"></i>
+                        Proactive Software Quality
+                    </div>
+
+                    <h1>
+                        Prevent Bugs
+                        <span>Before Deployment.</span>
+                    </h1>
+
+                    <p>
+                        Bug Prevention System helps development teams identify,
+                        track, and prevent software defects before they reach
+                        production.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <button class="primary-btn" data-go="dashboard">
+                            Get Started
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <button class="secondary-btn" data-go="checklist">
+                            <i class="fa-solid fa-list-check"></i>
+                            View Checklist
+                        </button>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div>
+                            <strong>98%</strong>
+                            <span>Prevention Rate</span>
+                        </div>
+
+                        <div>
+                            <strong>1.2K+</strong>
+                            <span>Bugs Prevented</span>
+                        </div>
+
+                        <div>
+                            <strong>24/7</strong>
+                            <span>Monitoring</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-visual">
+
+                    <div class="floating-card card-one">
+                        <i class="fa-solid fa-check"></i>
+                        <div>
+                            <strong>Code Review</strong>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <div class="shield-container">
+                        <div class="shield-ring">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                    </div>
+
+                    <div class="floating-card card-two">
+                        <i class="fa-solid fa-shield-check"></i>
+                        <div>
+                            <strong>Security Scan</strong>
+                            <span>Passed</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Why BugGuard?</p>
+                    <h2>Everything you need for safer releases</h2>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="glass-card feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3>Early Detection</h3>
+                    <p>
+                        Detect potential defects early in the development
+                        lifecycle before they become production problems.
+                    </p>
+                </div>
+
+                <div class="glass-card feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <h3>Smart Analytics</h3>
+                    <p>
+                        Analyze bug trends, severity distribution, and module
+                        performance with clear visual reports.
+                    </p>
+                </div>
+
+                <div class="glass-card feature-card">
+                    <div class="feature-icon green">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <h3>Quality Checklist</h3>
+                    <p>
+                        Follow a structured prevention checklist before every
+                        deployment.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DASHBOARD ================= -->
+        <section class="page" id="dashboard">
+
+            <div class="page-heading">
+                <div>
+                    <p class="eyebrow">Overview</p>
+                    <h1>Dashboard</h1>
+                    <p>Monitor your software quality at a glance.</p>
+                </div>
+
+                <button class="primary-btn small" data-go="report">
+                    <i class="fa-solid fa-plus"></i>
+                    Report Bug
+                </button>
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-bug"></i>
+                    </div>
+                    <div>
+                        <span>Total Bugs</span>
+                        <h2 id="totalBugs">24</h2>
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12% this month
+                        </small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon red">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <span>Critical Bugs</span>
+                        <h2 id="criticalBugs">5</h2>
+                        <small class="negative">
+                            <i class="fa-solid fa-arrow-down"></i>
+                            8% this month
+                        </small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div>
+                        <span>Resolved Bugs</span>
+                        <h2 id="resolvedBugs">18</h2>
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            18% this month
+                        </small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <span>Prevention Score</span>
+                        <h2>92%</h2>
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            Excellent
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+                <div class="glass-card chart-card">
+
+                    <div class="card-header">
+                        <div>
+                            <h3>Prevention Performance</h3>
+                            <p>Quality checks completed this month</p>
+                        </div>
+
+                        <span class="chart-badge">92%</span>
+                    </div>
+
+                    <div class="progress-wrapper">
+
+                        <div class="progress-label">
+                            <span>Code Quality</span>
+                            <strong>95%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:95%"></span>
+                        </div>
+
+                        <div class="progress-label">
+                            <span>Testing Coverage</span>
+                            <strong>88%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:88%"></span>
+                        </div>
+
+                        <div class="progress-label">
+                            <span>Security</span>
+                            <strong>94%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:94%"></span>
+                        </div>
+
+                        <div class="progress-label">
+                            <span>Documentation</span>
+                            <strong>91%</strong>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:91%"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="glass-card circular-card">
+
+                    <div class="card-header">
+                        <div>
+                            <h3>Prevention Score</h3>
+                            <p>Overall quality score</p>
+                        </div>
+                    </div>
+
+                    <div class="circle-progress">
+                        <div class="circle-inner">
+                            <strong>92%</strong>
+                            <span>Excellent</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="glass-card activity-card">
+
+                <div class="card-header">
+                    <div>
+                        <h3>Recent Activity</h3>
+                        <p>Latest system updates</p>
+                    </div>
+
+                    <button class="text-btn" data-go="history">
+                        View All
+                    </button>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+                        <div class="activity-icon green">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div>
+                            <strong>BUG-1024 resolved</strong>
+                            <p>Authentication module</p>
+                        </div>
+                        <time>10 min ago</time>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon red">
+                            <i class="fa-solid fa-bug"></i>
+                        </div>
+                        <div>
+                            <strong>BUG-1025 reported</strong>
+                            <p>Payment module</p>
+                        </div>
+                        <time>42 min ago</time>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon blue">
+                            <i class="fa-solid fa-shield-check"></i>
+                        </div>
+                        <div>
+                            <strong>Security scan completed</strong>
+                            <p>No critical vulnerabilities found</p>
+                        </div>
+                        <time>1 hr ago</time>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon purple">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <strong>Code review completed</strong>
+                            <p>Dashboard module</p>
+                        </div>
+                        <time>2 hrs ago</time>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BUG REPORT ================= -->
+        <section class="page" id="report">
+
+            <div class="page-heading">
+                <div>
+                    <p class="eyebrow">Quality Control</p>
+                    <h1>Report a Bug</h1>
+                    <p>Submit a new issue for tracking and prevention.</p>
+                </div>
+            </div>
+
+            <div class="glass-card form-card">
+
+                <form id="bugForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="bugId">Bug ID</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-hashtag"></i>
+                                <input
+                                    type="text"
+                                    id="bugId"
+                                    placeholder="BUG-1026"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bugTitle">Title</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-heading"></i>
+                                <input
+                                    type="text"
+                                    id="bugTitle"
+                                    placeholder="Enter bug title"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group full">
+                            <label for="bugDescription">Description</label>
+                            <div class="input-wrapper textarea-wrapper">
+                                <i class="fa-solid fa-align-left"></i>
+                                <textarea
+                                    id="bugDescription"
+                                    placeholder="Describe the bug, steps to reproduce, expected behavior..."
+                                    required
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="priority">Priority</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-flag"></i>
+                                <select id="priority" required>
+                                    <option value="">Select priority</option>
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="module">Module</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-cubes"></i>
+                                <input
+                                    type="text"
+                                    id="module"
+                                    placeholder="e.g. Authentication"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reporter">Reporter Name</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user"></i>
+                                <input
+                                    type="text"
+                                    id="reporter"
+                                    placeholder="Your name"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="formMessage"></div>
+
+                    <button type="submit" class="primary-btn submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Submit Bug Report
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CHECKLIST ================= -->
+        <section class="page" id="checklist">
+
+            <div class="page-heading">
+                <div>
+                    <p class="eyebrow">Release Quality</p>
+                    <h1>Bug Prevention Checklist</h1>
+                    <p>Complete every quality check before deployment.</p>
+                </div>
+            </div>
+
+            <div class="checklist-layout">
+
+                <div class="glass-card checklist-card">
+
+                    <div class="checklist-header">
+                        <div>
+                            <h3>Pre-Deployment Checklist</h3>
+                            <p id="checklistStatus">
+                                0 of 5 tasks completed
+                            </p>
+                        </div>
+
+                        <div class="check-circle">
+                            <i class="fa-solid fa-shield"></i>
+                        </div>
+                    </div>
+
+                    <div class="checklist-progress">
+                        <div id="checkProgressBar"></div>
+                    </div>
+
+                    <div class="check-items">
+
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="custom-checkbox">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="check-content">
+                                <strong>Code Review</strong>
+                                <small>Review code for logic and quality issues</small>
+                            </span>
+                            <span class="check-badge">Required</span>
+                        </label>
+
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="custom-checkbox">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="check-content">
+                                <strong>Unit Testing</strong>
+                                <small>Verify individual functions and components</small>
+                            </span>
+                            <span class="check-badge">Required</span>
+                        </label>
+
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="custom-checkbox">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="check-content">
+                                <strong>Security Scan</strong>
+                                <small>Check for security vulnerabilities</small>
+                            </span>
+                            <span class="check-badge">Security</span>
+                        </label>
+
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="custom-checkbox">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="check-content">
+                                <strong>Performance Testing</strong>
+                                <small>Ensure acceptable response times and resource usage</small>
+                            </span>
+                            <span class="check-badge">Performance</span>
+                        </label>
+
+                        <label class="check-item">
+                            <input type="checkbox">
+                            <span class="custom-checkbox">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span class="check-content">
+                                <strong>Documentation Review</strong>
+                                <small>Verify technical and user documentation</small>
+                            </span>
+                            <span class="check-badge">Required</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="glass-card checklist-tip">
+
+                    <div class="tip-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <h3>Quality Tip</h3>
+
+                    <p>
+                        Fixing bugs during development is significantly cheaper
+                        than fixing them after deployment. Complete every
+                        checklist item before releasing your application.
+                    </p>
+
+                    <div class="tip-stat">
+                        <strong>5×</strong>
+                        <span>Lower cost when bugs are found early</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HISTORY ================= -->
+        <section class="page" id="history">
+
+            <div class="page-heading">
+                <div>
+                    <p class="eyebrow">Issue Tracking</p>
+                    <h1>Bug History</h1>
+                    <p>Search, filter, and sort reported bugs.</p>
+                </div>
+            </div>
+
+            <div class="glass-card history-card">
+
+                <div class="table-toolbar">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="text"
+                            id="bugSearch"
+                            placeholder="Search bugs..."
+                        >
+                    </div>
+
+                    <select id="severityFilter">
+                        <option value="All">All Severity</option>
+                        <option value="Critical">Critical</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+
+                    <select id="statusFilter">
+                        <option value="All">All Status</option>
+                        <option value="Open">Open</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Resolved">Resolved</option>
+                    </select>
+
+                </div>
+
+                <div class="table-responsive">
+
+                    <table id="bugTable">
+
+                        <thead>
+                            <tr>
+                                <th data-sort="id">
+                                    Bug ID
+                                    <i class="fa-solid fa-sort"></i>
+                                </th>
+                                <th data-sort="module">
+                                    Module
+                                    <i class="fa-solid fa-sort"></i>
+                                </th>
+                                <th data-sort="severity">
+                                    Severity
+                                    <i class="fa-solid fa-sort"></i>
+                                </th>
+                                <th data-sort="status">
+                                    Status
+                                    <i class="fa-solid fa-sort"></i>
+                                </th>
+                                <th data-sort="date">
+                                    Date
+                                    <i class="fa-solid fa-sort"></i>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="bugTableBody"></tbody>
+
+                    </table>
+
+                </div>
+
+                <div id="noResults" class="no-results">
+                    <i class="fa-solid fa-face-frown"></i>
+                    <p>No bugs found.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ANALYTICS ================= -->
+        <section class="page" id="analytics">
+
+            <div class="page-heading">
+                <div>
+                    <p class="eyebrow">Data Insights</p>
+                    <h1>Analytics</h1>
+                    <p>Understand bug patterns and software quality trends.</p>
+                </div>
+            </div>
+
+
+            <div class="analytics-grid">
+
+                <div class="glass-card analytics-card">
+
+                    <div class="card-header">
+                        <div>
+                            <h3>Bugs by Severity</h3>
+                            <p>Current distribution</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="severityChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <div class="glass-card analytics-card">
+
+                    <div class="card-header">
+                        <div>
+                            <h3>Bugs by Module</h3>
+                            <p>Distribution across modules</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="moduleChart"></canvas>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="glass-card trend-card">
+
+                <div class="card-header">
+                    <div>
+                        <h3>Monthly Bug Trend</h3>
+                        <p>Reported vs resolved bugs</p>
+                    </div>
+
+                    <span class="chart-badge">2026</span>
+                </div>
+
+                <div class="large-chart">
+                    <canvas id="trendChart"></canvas>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SETTINGS ================= -->
+        <section class="page" id="settings">
+
+            <div class="page-heading">
+                <div>
+                    <p class="eyebrow">Preferences</p>
+                    <h1>Settings</h1>
+                    <p>Customize your BugGuard experience.</p>
+                </div>
+            </div>
+
+
+            <div class="settings-grid">
+
+                <div class="glass-card settings-card">
+
+                    <div class="settings-title">
+                        <div class="settings-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div>
+                            <h3>Profile</h3>
+                            <p>Your account information</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-large">
+
+                        <div class="avatar large">
+                            JD
+                        </div>
+
+                        <div>
+                            <h3>John Doe</h3>
+                            <p>john.doe@example.com</p>
+                            <span class="role-badge">Developer</span>
+                        </div>
+
+                    </div>
+
+                    <div class="profile-details">
+
+                        <div>
+                            <span>Department</span>
+                            <strong>Engineering</strong>
+                        </div>
+
+                        <div>
+                            <span>Member Since</span>
+                            <strong>January 2026</strong>
+                        </div>
+
+                    </div>
+
+                    <button class="secondary-btn full-btn">
+                        <i class="fa-solid fa-pen"></i>
+                        Edit Profile
+                    </button>
+
+                </div>
+
+
+                <div class="glass-card settings-card">
+
+                    <div class="settings-title">
+                        <div class="settings-icon">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <div>
+                            <h3>Preferences</h3>
+                            <p>Control application behavior</p>
+                        </div>
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div class="setting-info">
+                            <div class="setting-symbol">
+                                <i class="fa-solid fa-moon"></i>
+                            </div>
+                            <div>
+                                <strong>Dark Mode</strong>
+                                <small>Switch between light and dark themes</small>
+                            </div>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div class="setting-info">
+                            <div class="setting-symbol">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                            <div>
+                                <strong>Notifications</strong>
+                                <small>Receive bug and system notifications</small>
+                            </div>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="notificationToggle"
+                                checked
+                            >
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div class="setting-info">
+                            <div class="setting-symbol">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <strong>Analytics Tracking</strong>
+                                <small>Allow quality analytics collection</small>
+                            </div>
+                        </div>
+
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <strong id="toastTitle">Success</strong>
+            <p id="toastMessage">Action completed successfully.</p>
+        </div>
+        <button id="closeToast">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
